@@ -1,5 +1,5 @@
 {
-  "prefix": "!",
-  "token": "BOTTOKEN",
-  "staffid": "STAFFROLEID"
+  "prefix": "Enter the prefix here",
+  "token": "Enter the Bot Token Here",
+  "staffid": "Enter the Role ID of the Staff Role Here"
 }
