@@ -24,6 +24,7 @@ if (message.content.startsWith(config.prefix + "embedhelp")) {
 	.setAuthor('Created by SoCuul', 'https://i.imgur.com/lKuBaAt.png', '')
 	.addFields(
 		{ name: 'Send embed', value: `${config.prefix}embed Title_Message`},
+		{ name: 'Send rainbow embed', value: `${config.prefix}rainbowembed Title_Message`},
 		{ name: 'Restart Bot', value: `${config.prefix}restartembedbot`})
 		.setTimestamp()
 	message.channel.send(about);
@@ -37,6 +38,33 @@ if (message.content.startsWith(config.prefix + "embed")) {
 		var parts = announcement.split('_', 2);
 		const announcementembed = new Discord.MessageEmbed()
 		.setColor(`#00B0ED`)
+		.addFields(
+			{ name: parts[0], value: parts[1]},)
+			.setTimestamp()
+			.setFooter(`Sent by ${message.author.username}`, message.author.avatarURL)
+			message.delete()
+			message.channel.send(announcementembed);
+			//Console log
+			console.log('----------------------------------------------------------------------------')
+			console.log(`${message.author.username} embedded the following message: `)
+			console.log(`Channel: ${message.channel}`)
+			console.log(`Title: ${parts[0]}`)
+			console.log(`Message: ${parts[1]}`);
+			console.log('----------------------------------------------------------------------------')
+			console.log('')   
+	}else {
+message.channel.send(`Sorry, but you don't have the correct permissions to use this command :(`)
+}}else
+//Rainbow Embed Command
+if (message.content.startsWith(config.prefix + "rainbowembed")) {
+	if(message.member.roles.cache.has(config.staffid)) {
+		const command = config.prefix + "rainbowembed"
+		const args = message.content.slice(command.length).trim().split(/ +/g);
+		const announcement = args.slice(0).join(" ")
+		var parts = announcement.split('_', 2);
+		var RandomColour = '#' + ("000000" + Math.random().toString(16).slice(2, 8).toUpperCase()).slice(-6);
+		const announcementembed = new Discord.MessageEmbed()
+		.setColor(`${RandomColour}`)
 		.addFields(
 			{ name: parts[0], value: parts[1]},)
 			.setTimestamp()
