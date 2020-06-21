@@ -24,7 +24,7 @@ if (message.content.startsWith(config.prefix + "embedhelp")) {
 	.setAuthor('Created by SoCuul', 'https://i.imgur.com/lKuBaAt.png', '')
 	.addFields(
 		{ name: 'Send embed', value: `${config.prefix}embed Title_Message`},
-		{ name: 'Send custom colour embed (In hex or HTML Colour Names)', value: `${config.prefix}colourembed Colour_Title_Message`},
+		{ name: 'Send custom colour embed (In HEX or HTML Colour Names)', value: `${config.prefix}colourembed Colour_Title_Message`},
 		{ name: 'Send rainbow embed', value: `${config.prefix}rainbowembed Title_Message`},
 		{ name: 'Restart Bot', value: `${config.prefix}restartembedbot`})
 		.setTimestamp()
@@ -62,7 +62,7 @@ if (message.content.startsWith(config.prefix + "colourembed")) {
 		const command = config.prefix + "colourembed"
 		const args = message.content.slice(command.length).trim().split(/ +/g);
 		const announcement = args.slice(0).join(" ")
-		var parts = announcement.split('_', 2);
+		var parts = announcement.split('_', 3);
 		const announcementembed = new Discord.MessageEmbed()
 		.setColor(`${parts[0]}`)
 		.addFields(
