@@ -4,7 +4,7 @@ const config = require("./config.json");
 
 
 client.on('ready', () => {
-  console.log('Embed Bot is ready for action!');
+  console.log('EmbedBot is ready for action!');
 });
 
 
@@ -19,8 +19,8 @@ client.on('message', message => {
 if (message.content.startsWith(config.prefix + "embedhelp")) {
 	const about = new Discord.MessageEmbed()
 	.setColor('#16ec50')
-	.setTitle('Embed Bot')
-	.setDescription('These are the current Embed Bot Commands!')
+	.setTitle('EmbedBot')
+	.setDescription('These are the current EmbedBot Commands!')
 	.setAuthor('Created by SoCuul', 'https://i.imgur.com/lKuBaAt.png', '')
 	.addFields(
 		{ name: 'Send embed', value: `${config.prefix}embed Title_Message`},
@@ -113,7 +113,7 @@ message.channel.send(`Sorry, but you don't have the correct permissions to use t
 if (message.content.startsWith(config.prefix + "restartembedbot")) {
 	if(message.member.roles.cache.has(config.staffid)) {
 		console.log(`Embed Bot is restarting...`);
-		message.channel.send('Embed Bot is restarting...').then(sentMessage =>  process.exit(0))
+		message.channel.send('EmbedBot is restarting...').then(sentMessage =>  process.exit(0))
 }else {
 message.channel.send(`Sorry, but you don't have the correct permissions to use this command :(`)
 }}});
