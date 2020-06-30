@@ -42,7 +42,7 @@ if (message.content.startsWith(config.prefix + "embed")) {
 		.addFields(
 			{ name: parts[0], value: parts[1]},)
 			.setTimestamp()
-			.setFooter(`Sent by ${message.author.username}`, message.author.avatarURL)
+			.setFooter(`Sent by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
 			message.delete()
 			message.channel.send(announcementembed);
 			//Console log
@@ -68,7 +68,7 @@ if (message.content.startsWith(config.prefix + "colourembed")) {
 		.addFields(
 			{ name: parts[1], value: parts[2]},)
 			.setTimestamp()
-			.setFooter(`Sent by ${message.author.username}`, message.author.avatarURL)
+			.setFooter(`Sent by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
 			message.delete()
 			message.channel.send(announcementembed);
 			//Console log
@@ -95,7 +95,7 @@ if (message.content.startsWith(config.prefix + "rainbowembed")) {
 		.addFields(
 			{ name: parts[0], value: parts[1]},)
 			.setTimestamp()
-			.setFooter(`Sent by ${message.author.username}`, message.author.avatarURL)
+			.setFooter(`Sent by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
 			message.delete()
 			message.channel.send(announcementembed);
 			//Console log
