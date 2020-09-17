@@ -1,0 +1,23 @@
+{
+  "name": "embedbot",
+  "version": "1.0.1",
+  "description": "A self-hosted discord.js bot to send simple embeds.",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoCuul/EmbedBot.git"
+  },
+  "author": "SoCuul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SoCuul/EmbedBot/issues"
+  },
+  "homepage": "https://github.com/SoCuul/EmbedBot#readme"
+}
